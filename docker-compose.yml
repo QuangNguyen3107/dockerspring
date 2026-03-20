@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: daj2ee-postgres
+    environment:
+      POSTGRES_DB: daj2ee
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - daj2ee_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d daj2ee"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  daj2ee_postgres_data:

@@ -1,0 +1,38 @@
+# Build output
+target/
+
+# IDE files
+.idea/
+*.iws
+*.iml
+*.ipr
+.vscode/
+.project
+.settings/
+.classpath
+.factorypath
+
+# Maven wrapper jar (downloaded at build time)
+.mvn/wrapper/maven-wrapper.jar
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Docker
+Dockerfile
+.dockerignore
+
+# Local env / secrets
+.env
+src/main/resources/application-local.properties
+
+# Docs
+README.md
+HELP.md
+docs/
+
+# OS
+.DS_Store
+Thumbs.db
