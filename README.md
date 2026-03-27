@@ -1,4 +1,34 @@
-# daj2ee — Coding platform (MVP)
+# Hello World Spring Boot
+
+A simple Spring Boot application that displays "Hello World".
+
+## Running the application
+
+### Using Docker
+
+Build and run with Docker:
+
+```bash
+docker build -t hello-world-spring .
+docker run -p 8080:8080 hello-world-spring
+```
+
+Or use Docker Compose:
+
+```bash
+docker-compose up
+```
+
+Then visit http://localhost:8080/
+
+### Using Maven
+
+```bash
+./mvnw spring-boot:run
+```
+
+Then visit http://localhost:8080/
+ — Coding platform (MVP)
 
 A lightweight Spring Boot backend for a coding website where users can register, log in, and read/write coding tutorials. This repository contains the basic MVP features so you can start building the more advanced pieces (code execution, contests, points/coins, chatbox, etc.) on top of it.
 
