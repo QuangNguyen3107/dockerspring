@@ -8,7 +8,7 @@ on:
       - main
 
 env:
-  IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}/docker-actions
+  IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}/docker-actions-v2
 
 jobs:
   build-and-push:
