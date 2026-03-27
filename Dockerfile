@@ -36,7 +36,7 @@ RUN chown spring:spring app.jar
 USER spring
 
 # Expose the default port
-EXPOSE 8081
+EXPOSE 80
 
 # JVM memory tuning for small containers (~512 MB):
 #

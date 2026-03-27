@@ -54,9 +54,9 @@ jobs:
       - name: Triển khai lên DevOps Classroom
         if: github.ref == 'refs/heads/main'
         run: |
-          REPO="quangnguyen3107/docker-actions"
-          CONTAINER_PORT=8081
-          RESPONSE=$(curl -sS -w "\n%{http_code}" -X POST "${{ secrets.DEPLOY_URL }}?repo=$REPO&tag=latest&slot=5&container_port=$CONTAINER_PORT&strict_container_port=0")
+          REPO="${{ env.IMAGE_NAME }}"
+          CONTAINER_PORT=80
+          RESPONSE=$(curl -sS -w "\n%{http_code}" -X POST "${{ secrets.DEPLOY_URL }}?repo=$REPO&tag=latest&slot=8&container_port=$CONTAINER_PORT&strict_container_port=0")
           BODY=$(echo "$RESPONSE" | sed '$d')
           CODE=$(echo "$RESPONSE" | tail -n1)
           echo "Webhook HTTP: $CODE"
